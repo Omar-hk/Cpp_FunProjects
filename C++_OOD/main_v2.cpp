@@ -157,7 +157,6 @@ void employee_sys() {
 }
 
 int main() {
-    cout << "HELLO, MY NAME IS OMAR AND THIS IS MY FIRST C++ PROJECT (: \n";
     employee_sys();
     return 0;
 }
