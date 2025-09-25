@@ -3,9 +3,9 @@
 using namespace std;
 const int MAX_SPEC = 20;
 const int MAX_QUEUE = 5;
-string names[MAX_SPEC+1][MAX_QUEUE+1];
-int status[MAX_SPEC+1][MAX_QUEUE+1];
-int queue_len[MAX_SPEC+1];
+string names[MAX_SPEC][MAX_QUEUE];
+int status[MAX_SPEC][MAX_QUEUE];
+int queue_len[MAX_SPEC];
 
 int menu(){
 	int choice = -1;
@@ -63,7 +63,7 @@ bool add_patient(){ // output: urgent or not
 		cout << "Sorry There is no available seats in the current specialization ):";
 		return false;
 	}
-	if(status == 0){ // not urgent
+	if(stat == 0){ // not urgent
 		names[spec][pos] = name;
 		status[spec][pos] = stat;
 		queue_len[spec]++;
